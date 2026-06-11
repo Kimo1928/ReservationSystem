@@ -1,0 +1,78 @@
+<div class="min-h-screen bg-base-200 flex flex-col items-center justify-center p-8">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl font-bold text-base-content">Event Management System</h1>
+      <p class="text-base-content/50 mt-3 text-lg">Manage hotels, investors, presenters and reservations</p>
+    </div>
+  
+    <!-- Navigation Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl">
+  
+      <!-- Hotels -->
+      <a routerLink="/hotels" class="card bg-base-100 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer">
+        <div class="card-body items-center text-center gap-4">
+          <div class="bg-primary/10 rounded-2xl p-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="card-title justify-center text-lg">Hotels</h2>
+            <p class="text-base-content/50 text-sm mt-1">Manage hotels, rooms and time slots</p>
+          </div>
+          <div class="badge badge-primary badge-outline">Manage</div>
+        </div>
+      </a>
+  
+      <!-- Investors -->
+      <a routerLink="/investors" class="card bg-base-100 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer">
+        <div class="card-body items-center text-center gap-4">
+          <div class="bg-secondary/10 rounded-2xl p-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-secondary" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="card-title justify-center text-lg">Investors</h2>
+            <p class="text-base-content/50 text-sm mt-1">Manage investors and their sectors</p>
+          </div>
+          <div class="badge badge-secondary badge-outline">Manage</div>
+        </div>
+      </a>
+  
+      <!-- Presenters -->
+      <a routerLink="/presenters" class="card bg-base-100 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer">
+        <div class="card-body items-center text-center gap-4">
+          <div class="bg-accent/10 rounded-2xl p-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-accent" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="card-title justify-center text-lg">Presenters</h2>
+            <p class="text-base-content/50 text-sm mt-1">Manage presenters and their topics</p>
+          </div>
+          <div class="badge badge-accent badge-outline">Manage</div>
+        </div>
+      </a>
+  
+      <!-- Reservations -->
+      <a routerLink="/reservations" class="card bg-base-100 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer">
+        <div class="card-body items-center text-center gap-4">
+          <div class="bg-success/10 rounded-2xl p-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-success" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="card-title justify-center text-lg">Reservations</h2>
+            <p class="text-base-content/50 text-sm mt-1">Book rooms for investor sessions</p>
+          </div>
+          <div class="badge badge-success badge-outline">Manage</div>
+        </div>
+      </a>
+  
+    </div>
+  
+  </div>

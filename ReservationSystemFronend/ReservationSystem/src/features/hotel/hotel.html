@@ -1,0 +1,229 @@
+<!-- hotel.component.html -->
+<div class="ems-page">
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>
+        <span class="header-icon">🏨</span>
+        Hotel Management
+      </h1>
+      <p class="page-subtitle">Register hotels, conference rooms, and available time slots for meetings.</p>
+    </div>
+  
+    <!-- Tab Navigation -->
+    <div class="tab-bar">
+      <button
+        class="tab"
+        [class.active]="$any(activeTab) === 'add'"
+        (click)="activeTab = 'add'">
+        Add Hotel
+      </button>
+      <button
+        class="tab"
+        [class.active]="$any(activeTab) === 'list'"
+        (click)="activeTab = 'list'; loadHotels()">
+        All Hotels
+      </button>
+    </div>
+  
+    <!-- ─────────────────────────────── ADD HOTEL TAB ─────────────────────────────── -->
+    <div *ngIf="$any(activeTab) === 'add'">
+  
+      <!-- Hotel Details Card -->
+      <div class="card">
+        <p class="section-label">Hotel Details</p>
+  
+        <div class="form-row">
+          <div class="field">
+            <label for="hotelName">Hotel Name <span class="required">*</span></label>
+            <input
+              id="hotelName"
+              type="text"
+              [(ngModel)]="hotelForm.name"
+              placeholder="e.g. Hilton Cairo"
+              [class.input-error]="submitted && !hotelForm.name" />
+            <span class="error-msg" *ngIf="submitted && !hotelForm.name">Hotel name is required.</span>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <!-- Conference Rooms Card -->
+      <div class="card">
+        <div class="rooms-header">
+          <p class="section-label" style="margin-bottom: 0;">Conference Rooms</p>
+          <button class="btn-ghost-sm" type="button" (click)="addRoom()">
+            + Add Room
+          </button>
+        </div>
+  
+        <p class="error-msg" *ngIf="submitted && hotelForm.rooms.length === 0">
+          At least one conference room is required.
+        </p>
+  
+        <!-- Room Items -->
+        <div
+          class="room-item"
+          *ngFor="let room of hotelForm.rooms; let i = index; trackBy: trackByIndex">
+  
+          <!-- Room Name Row -->
+          <div class="room-top">
+            <div class="field" style="flex: 1; margin-right: 12px; margin-bottom: 0;">
+              <label [for]="'roomName-' + i">
+                Room Name / Number <span class="required">*</span>
+              </label>
+              <input
+                [id]="'roomName-' + i"
+                type="text"
+                [(ngModel)]="room.name"
+                placeholder="e.g. Conference Room {{ i + 1 }}"
+                style="max-width: 280px;"
+                [class.input-error]="submitted && !room.name" />
+              <span class="error-msg" *ngIf="submitted && !room.name">Room name is required.</span>
+            </div>
+  
+            <button class="btn-danger-sm" type="button" (click)="removeRoom(i)">
+              🗑 Remove
+            </button>
+          </div>
+  
+          <!-- Days of the Week -->
+          <div class="form-row" style="margin-top: 10px; margin-bottom: 10px;">
+            <div class="field">
+              <label>Year <span class="required">*</span></label>
+              <select [(ngModel)]="room.selectedYear">
+                <option value="" disabled>Select year</option>
+                <option *ngFor="let y of yearOptions" [value]="y">{{ y }}</option>
+              </select>
+              <span class="error-msg" *ngIf="submitted && !room.selectedYear">Year is required.</span>
+            </div>
+          
+            <div class="field">
+              <label>Month <span class="required">*</span></label>
+              <select [(ngModel)]="room.selectedMonth">
+                <option value="" disabled>Select month</option>
+                <option *ngFor="let m of monthOptions" [value]="m.value">{{ m.label }}</option>
+              </select>
+              <span class="error-msg" *ngIf="submitted && !room.selectedMonth">Month is required.</span>
+            </div>
+          
+            <div class="field">
+              <label>Day <span class="required">*</span></label>
+              <select [(ngModel)]="room.selectedDay">
+                <option value="" disabled>Select day</option>
+                <option *ngFor="let d of (room.selectedYear && room.selectedMonth ? getDaysInMonth(room.selectedYear, room.selectedMonth) : [])" [value]="d">{{ d }}</option>
+              </select>
+              <span class="error-msg" *ngIf="submitted && !room.selectedDay">Day is required.</span>
+            </div>
+          </div>
+  
+          <!-- Time Slots -->
+          <p class="slots-label">Available Time Slots</p>
+          <div class="slot-row">
+            <span
+              class="slot-chip"
+              *ngFor="let slot of room.timeSlots; let j = index">
+              {{ slot.from }} – {{ slot.to }}
+              <span class="chip-x" (click)="removeSlot(i, j)" title="Remove slot">✕</span>
+            </span>
+  
+            <!-- Add Slot Trigger -->
+            <button
+              class="add-slot-btn"
+              type="button"
+              (click)="toggleSlotPicker(i)"
+              *ngIf="!room.showPicker">
+              + Add Slot
+            </button>
+          </div>
+  
+          <!-- Inline Slot Picker -->
+          <div class="slot-picker" *ngIf="room.showPicker">
+            <select [(ngModel)]="room.newSlot.from">
+              <option *ngFor="let t of timeOptions" [value]="t">{{ t }}</option>
+            </select>
+            <span class="picker-to-label">to</span>
+            <select [(ngModel)]="room.newSlot.to">
+              <option *ngFor="let t of timeOptions" [value]="t">{{ t }}</option>
+            </select>
+            <button
+              class="btn-primary"
+              style="padding: 4px 14px; font-size: 12px;"
+              type="button"
+              (click)="confirmSlot(i)">
+              Add
+            </button>
+            <button
+              class="btn-outline"
+              style="padding: 3px 10px; font-size: 12px;"
+              type="button"
+              (click)="room.showPicker = false">
+              Cancel
+            </button>
+            <span class="error-msg" *ngIf="room.slotError">{{ room.slotError }}</span>
+          </div>
+  
+        </div>
+  
+        <!-- Empty state -->
+        <div class="rooms-empty" *ngIf="hotelForm.rooms.length === 0">
+          <p>No rooms added yet. Click "Add Room" to get started.</p>
+        </div>
+      </div>
+  
+      <!-- Form Actions -->
+      <div class="footer-actions">
+        <button class="btn-outline" type="button" (click)="resetForm()">Clear</button>
+        <button class="btn-primary" type="button" (click)="saveHotel()" [disabled]="isSaving">
+          {{ isSaving ? 'Saving...' : 'Save Hotel' }}
+        </button>
+      </div>
+  
+      <!-- Success / Error Messages -->
+      <div class="alert alert-success" *ngIf="successMsg">{{ successMsg }}</div>
+      <div class="alert alert-error" *ngIf="errorMsg">{{ errorMsg }}</div>
+  
+    </div>
+    <!-- end Add Hotel Tab -->
+  
+  
+    <!-- ─────────────────────────────── ALL HOTELS TAB ─────────────────────────────── -->
+    <div *ngIf="$any(activeTab) === 'list'">
+  
+      <!-- Loading State -->
+      <p class="loading-text" *ngIf="isLoading()">Loading hotels...</p>
+  
+      <!-- Hotels Table -->
+      <div class="card" style="padding: 0; overflow: hidden;" *ngIf="!isLoading()">
+        <table class="data-table" *ngIf="hotels().length > 0">
+          <thead>
+            <tr>
+              <th>Hotel</th>
+              <th>Rooms</th>
+              <th>Total Slots</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let hotel of hotels()">
+              <td class="td-strong">{{ hotel.name }}</td>
+              <td>
+                <span class="badge-rooms">{{ hotel.rooms?.length || 0 }} rooms</span>
+              </td>
+              <td>{{ getTotalSlots(hotel) }}</td>
+            </tr>
+          </tbody>
+        </table>
+  
+        <!-- Empty State -->
+        <div class="table-empty" *ngIf="hotels().length === 0">
+          <p>No hotels registered yet.</p>
+          <button class="btn-primary" (click)="activeTab = 'add'">Add your first hotel</button>
+        </div>
+      </div>
+  
+    </div>
+    <!-- end All Hotels Tab -->
+  
+  </div>

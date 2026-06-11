@@ -1,0 +1,137 @@
+[
+  {
+    "ContainingType": "ReservationSystemBackend.Controllers.HotelController",
+    "Method": "CreateHotel",
+    "RelativePath": "api/Hotel/CreateHotel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createHotelDTO",
+        "Type": "ReservationSystemBackend.Data.DTOs.CreateHotelDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReservationSystemBackend.Controllers.HotelController",
+    "Method": "GetHotels",
+    "RelativePath": "api/Hotel/GetAllHotels",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReservationSystemBackend.Controllers.ReservationController",
+    "Method": "CreateReservation",
+    "RelativePath": "api/Reservation/AddReservation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createReservationDTO",
+        "Type": "ReservationSystemBackend.Data.DTOs.CreateReservationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReservationSystemBackend.Controllers.ReservationController",
+    "Method": "GetAvaliableRooms",
+    "RelativePath": "api/Reservation/GetAvaliableRooms",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "topicId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "investorId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "presenterId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReservationSystemBackend.Controllers.TopicController",
+    "Method": "GetAllTopics",
+    "RelativePath": "api/Topic/GettingAllTopics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReservationSystemBackend.Controllers.UserController",
+    "Method": "CreateUser",
+    "RelativePath": "api/User/CreateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createUserDTO",
+        "Type": "ReservationSystemBackend.Data.DTOs.CreateUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReservationSystemBackend.Controllers.UserController",
+    "Method": "GetPresenters",
+    "RelativePath": "api/User/GetMatchingPresenter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "topic",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "investor",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReservationSystemBackend.Controllers.UserController",
+    "Method": "GetInvestors",
+    "RelativePath": "api/User/GettingAllInvestors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReservationSystemBackend.Controllers.UserController",
+    "Method": "GetPresenters",
+    "RelativePath": "api/User/GettingAllPresenters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

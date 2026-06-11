@@ -1,0 +1,485 @@
+/* hotel.css */
+
+/* ── Page Layout ─────────────────────────────────────────────── */
+.ems-page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #1a1a2e;
+  }
+  
+  .page-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .page-header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0 0 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header-icon {
+    font-size: 22px;
+  }
+  
+  .page-subtitle {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+  }
+  
+  /* ── Tab Bar ─────────────────────────────────────────────────── */
+  .tab-bar {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tab {
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #64748b;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  
+  .tab:hover {
+    color: #1e40af;
+  }
+  
+  .tab.active {
+    color: #1e40af;
+    border-bottom-color: #1e40af;
+  }
+  
+  /* ── Card ────────────────────────────────────────────────────── */
+  .card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* ── Section Labels ──────────────────────────────────────────── */
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin: 0 0 14px 0;
+  }
+  
+  .slots-label {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0 0 6px 0;
+  }
+  
+  /* ── Form Grid ───────────────────────────────────────────────── */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .room-item .form-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .form-row.single {
+    grid-template-columns: 1fr;
+  }
+  
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #475569;
+  }
+  
+  .field input,
+  .field select {
+    padding: 8px 11px;
+    font-size: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #1a1a2e;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  
+  .field input:focus,
+  .field select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+    background: #fff;
+  }
+  
+  .input-error {
+    border-color: #ef4444 !important;
+  }
+  
+  .required {
+    color: #ef4444;
+  }
+  
+  /* ── Error / Alert Messages ──────────────────────────────────── */
+  .error-msg {
+    font-size: 11px;
+    color: #ef4444;
+    margin-top: 2px;
+  }
+  
+  .alert {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-top: 12px;
+  }
+  
+  .alert-success {
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+  }
+  
+  .alert-error {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+  }
+  
+  /* ── Rooms Section ───────────────────────────────────────────── */
+  .rooms-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .room-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+  }
+  
+  .room-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .rooms-empty {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #94a3b8;
+    font-size: 13px;
+  }
+  
+  /* ── Slot Chips ──────────────────────────────────────────────── */
+  .slot-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  
+  .slot-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background: #dbeafe;
+    color: #1e40af;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .chip-x {
+    cursor: pointer;
+    font-size: 11px;
+    color: #3b82f6;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.1s;
+  }
+  
+  .chip-x:hover {
+    opacity: 1;
+  }
+  
+  /* ── Slot Picker ─────────────────────────────────────────────── */
+  .slot-picker {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+  }
+  
+  .slot-picker select {
+    padding: 5px 8px;
+    font-size: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #f8fafc;
+    color: #1a1a2e;
+    outline: none;
+  }
+  
+  .slot-picker select:focus {
+    border-color: #3b82f6;
+  }
+  
+  .picker-to-label {
+    font-size: 12px;
+    color: #64748b;
+  }
+  
+  .add-slot-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border: 1px dashed #94a3b8;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #64748b;
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  
+  .add-slot-btn:hover {
+    background: #f1f5f9;
+    border-color: #64748b;
+  }
+  
+  /* ── Buttons ─────────────────────────────────────────────────── */
+  .btn-primary {
+    padding: 9px 22px;
+    background: #1e40af;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  
+  .btn-primary:hover {
+    background: #1d3a9e;
+  }
+  
+  .btn-primary:disabled {
+    background: #93c5fd;
+    cursor: not-allowed;
+  }
+  
+  .btn-outline {
+    padding: 8px 18px;
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  
+  .btn-outline:hover {
+    background: #f1f5f9;
+  }
+  
+  .btn-ghost-sm {
+    padding: 5px 12px;
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 12px;
+    color: #475569;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: background 0.15s;
+  }
+  
+  .btn-ghost-sm:hover {
+    background: #f1f5f9;
+  }
+  
+  .btn-danger-sm {
+    padding: 5px 10px;
+    background: transparent;
+    border: 1px solid #fca5a5;
+    border-radius: 7px;
+    font-size: 12px;
+    color: #b91c1c;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  
+  .btn-danger-sm:hover {
+    background: #fef2f2;
+  }
+  
+  /* ── Footer Actions ──────────────────────────────────────────── */
+  .footer-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 4px;
+  }
+  
+  /* ── Data Table (All Hotels) ─────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  
+  .data-table th {
+    text-align: left;
+    padding: 10px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+  }
+  
+  .data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #1a1a2e;
+    vertical-align: middle;
+  }
+  
+  .data-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .data-table tr:hover td {
+    background: #f8fafc;
+  }
+  
+  .td-strong {
+    font-weight: 500;
+  }
+  
+  .td-actions {
+    text-align: right;
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  
+  .badge-rooms {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 9px;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  
+  /* ── Day Picker ──────────────────────────────────────────────── */
+  .days-label {
+    font-size: 12px;
+    color: #64748b;
+    margin: 10px 0 6px 0;
+  }
+  
+  .day-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .day-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+    user-select: none;
+  }
+  
+  .day-btn:hover {
+    border-color: #3b82f6;
+    color: #1e40af;
+    background: #eff6ff;
+  }
+  
+  .day-btn.selected {
+    background: #1e40af;
+    border-color: #1e40af;
+    color: #ffffff;
+  }
+  
+  .error-msg.days-error {
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  /* ── Loading ─────────────────────────────────────────────────── */
+  .loading-text {
+    font-size: 13px;
+    color: #94a3b8;
+    padding: 1rem 0;
+  }
+  
+  .table-empty {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: #94a3b8;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }

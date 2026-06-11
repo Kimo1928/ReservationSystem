@@ -1,0 +1,339 @@
+<!-- presenter.html -->
+<div class="min-h-screen bg-base-200 p-6">
+    <div class="max-w-4xl mx-auto">
+  
+      <!-- ── Page Header ─────────────────────────────────────────────────────── -->
+      <div class="mb-6">
+        <h1 class="text-2xl font-semibold text-base-content flex items-center gap-2">
+          💼 Presenter Management
+        </h1>
+        <p class="text-sm text-base-content/60 mt-1">
+          Register presenters, their sectors of interest, and available time windows.
+        </p>
+      </div>
+  
+      <!-- ── Tabs ────────────────────────────────────────────────────────────── -->
+      <div class="tabs tabs-bordered mb-6">
+        <button
+          class="tab tab-lg"
+          [class.tab-active]="activeTab === 'add'"
+          (click)="activeTab = 'add'">
+          Add presenter
+        </button>
+        <button
+          class="tab tab-lg"
+          [class.tab-active]="activeTab === 'list'"
+          (click)="activeTab = 'list'; loadpresenters()">
+          All presenters
+        </button>
+      </div>
+  
+  
+      <!-- ══════════════════════════  ADD TAB  ══════════════════════════════════ -->
+      <div *ngIf="activeTab === 'add'">
+  
+        <!-- presenter Details Card -->
+        <div class="card bg-base-100 shadow-sm border border-base-300 mb-4">
+          <div class="card-body">
+            <p class="text-xs font-semibold text-base-content/40 uppercase tracking-widest mb-3">
+              presenter Details
+            </p>
+  
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  
+              <!-- Name -->
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">
+                    Name <span class="text-error">*</span>
+                  </span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. Tech Solutions"
+                  class="input input-bordered w-full"
+                  [class.input-error]="submitted && !presenterForm.name"
+                  [(ngModel)]="presenterForm.name" />
+                <label class="label" *ngIf="submitted && !presenterForm.name">
+                  <span class="label-text-alt text-error">Name is required.</span>
+                </label>
+              </div>
+  
+              <!-- Mobile -->
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">
+                    Mobile <span class="text-error">*</span>
+                  </span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. 01011111111"
+                  class="input input-bordered w-full"
+                  [class.input-error]="submitted && !presenterForm.mobile"
+                  [(ngModel)]="presenterForm.mobile" />
+                <label class="label" *ngIf="submitted && !presenterForm.mobile">
+                  <span class="label-text-alt text-error">Mobile is required.</span>
+                </label>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+  
+        <!-- Topic Availability Card -->
+        <div class="card bg-base-100 shadow-sm border border-base-300 mb-4">
+          <div class="card-body">
+  
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-xs font-semibold text-base-content/40 uppercase tracking-widest">
+                Sectors &amp; Availability
+              </p>
+              <button class="btn btn-sm btn-outline" type="button" (click)="addTopic()">
+                + Add Sector
+              </button>
+            </div>
+  
+            <div class="text-sm text-error mb-2"
+                 *ngIf="submitted && presenterForm.topics.length === 0">
+              At least one sector is required.
+            </div>
+  
+            <!-- Topic Rows -->
+            <div
+              class="border border-base-300 rounded-xl p-4 mb-3 bg-base-200/50"
+              *ngFor="let topic of presenterForm.topics; let i = index; trackBy: trackByIndex">
+  
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-sm font-medium text-base-content/70">Sector #{{ i + 1 }}</span>
+                <button
+                  class="btn btn-xs btn-error btn-outline"
+                  type="button"
+                  (click)="removeTopic(i)">
+                  ✕ Remove
+                </button>
+              </div>
+  
+              <!-- Topic dropdown -->
+              <div class="form-control mb-3">
+                <label class="label">
+                  <span class="label-text font-medium">
+                    Topic <span class="text-error">*</span>
+                  </span>
+                </label>
+                <select
+                  class="select select-bordered w-full"
+                  [class.select-error]="submitted && !topic.topicId"
+                  [(ngModel)]="topic.topicId">
+                  <option [value]="null" disabled>Select a topic</option>
+                  <option
+                    *ngFor="let t of topics()"
+                    [value]="t.id">
+                    {{ t.name }}
+                  </option>
+                </select>
+                <label class="label" *ngIf="submitted && !topic.topicId">
+                  <span class="label-text-alt text-error">Topic is required.</span>
+                </label>
+              </div>
+  
+              <!-- Date row: Year / Month / Day -->
+              <div class="grid grid-cols-3 gap-3 mb-3">
+  
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Year <span class="text-error">*</span></span>
+                  </label>
+                  <select
+                    class="select select-bordered w-full"
+                    [class.select-error]="submitted && !topic.year"
+                    [(ngModel)]="topic.year">
+                    <option [value]="null" disabled>Year</option>
+                    <option *ngFor="let y of yearOptions" [value]="y">{{ y }}</option>
+                  </select>
+                  <label class="label" *ngIf="submitted && !topic.year">
+                    <span class="label-text-alt text-error">Required.</span>
+                  </label>
+                </div>
+  
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Month <span class="text-error">*</span></span>
+                  </label>
+                  <select
+                    class="select select-bordered w-full"
+                    [class.select-error]="submitted && !topic.month"
+                    [(ngModel)]="topic.month">
+                    <option [value]="null" disabled>Month</option>
+                    <option *ngFor="let m of monthOptions" [value]="m.value">{{ m.label }}</option>
+                  </select>
+                  <label class="label" *ngIf="submitted && !topic.month">
+                    <span class="label-text-alt text-error">Required.</span>
+                  </label>
+                </div>
+  
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Day <span class="text-error">*</span></span>
+                  </label>
+                  <select
+                    class="select select-bordered w-full"
+                    [class.select-error]="submitted && !topic.day"
+                    [(ngModel)]="topic.day">
+                    <option [value]="null" disabled>Day</option>
+                    <option
+                      *ngFor="let d of getDaysInMonth(topic.year, topic.month)"
+                      [value]="d">
+                      {{ d }}
+                    </option>
+                  </select>
+                  <label class="label" *ngIf="submitted && !topic.day">
+                    <span class="label-text-alt text-error">Required.</span>
+                  </label>
+                </div>
+  
+              </div>
+  
+              <!-- Time row: From / To -->
+              <div class="grid grid-cols-2 gap-3">
+  
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">
+                      Available From <span class="text-error">*</span>
+                    </span>
+                  </label>
+                  <select
+                    class="select select-bordered w-full"
+                    [class.select-error]="submitted && !topic.fromHour"
+                    [(ngModel)]="topic.fromHour">
+                    <option *ngFor="let h of hourOptions" [value]="h">{{ h }}</option>
+                  </select>
+                </div>
+  
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">
+                      Available To <span class="text-error">*</span>
+                    </span>
+                  </label>
+                  <select
+                    class="select select-bordered w-full"
+                    [class.select-error]="submitted && !topic.toHour"
+                    [(ngModel)]="topic.toHour">
+                    <option *ngFor="let h of hourOptions" [value]="h">{{ h }}</option>
+                  </select>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+            <!-- Empty state -->
+            <div
+              class="text-center py-8 text-base-content/40 text-sm"
+              *ngIf="presenterForm.topics.length === 0">
+              No sectors added yet. Click "Add Sector" to get started.
+            </div>
+  
+          </div>
+        </div>
+  
+        <!-- Form Actions -->
+        <div class="flex justify-end gap-3 mb-4">
+          <button class="btn btn-ghost" type="button" (click)="resetForm()">Clear</button>
+          <button
+            class="btn btn-primary"
+            type="button"
+            (click)="savepresenter()"
+            [disabled]="isSaving()">
+            <span class="loading loading-spinner loading-sm" *ngIf="isSaving()"></span>
+            {{ isSaving() ? 'Saving...' : 'Save presenter' }}
+          </button>
+        </div>
+  
+        <!-- Alerts -->
+        <div class="alert alert-success mb-2" *ngIf="successMsg">
+          <span>✓ {{ successMsg }}</span>
+        </div>
+        <div class="alert alert-error mb-2" *ngIf="errorMsg">
+          <span>✕ {{ errorMsg }}</span>
+        </div>
+  
+      </div>
+      <!-- end Add Tab -->
+  
+  
+      <!-- ══════════════════════════  LIST TAB  ══════════════════════════════════ -->
+      <div *ngIf="activeTab === 'list'">
+  
+        <!-- Loading -->
+        <div class="flex justify-center py-12" *ngIf="isLoadingPresenters()">
+          <span class="loading loading-spinner loading-lg text-primary"></span>
+        </div>
+  
+        <!-- Table Card -->
+        <div
+          class="card bg-base-100 shadow-sm border border-base-300 overflow-hidden"
+          *ngIf="!isLoadingPresenters()">
+  
+          <!-- Has data -->
+          <div class="overflow-x-auto" *ngIf="presenters().length > 0">
+            <table class="table table-zebra w-full">
+              <thead>
+                <tr class="bg-base-200">
+                  <th class="text-xs uppercase tracking-wider">#</th>
+                  <th class="text-xs uppercase tracking-wider">Name</th>
+                  <th class="text-xs uppercase tracking-wider">Mobile</th>
+                  <th class="text-xs uppercase tracking-wider">Sectors</th>
+                  <th class="text-xs uppercase tracking-wider">Availability</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let presenter of presenters(); let i = index">
+                  <td class="text-base-content/50 text-sm">{{ i + 1 }}</td>
+                  <td class="font-medium">{{ presenter.name }}</td>
+                  <td class="text-sm">{{ presenter.mobile }}</td>
+                  <td>
+                    <div class="flex flex-wrap gap-1">
+                      <span
+                        class="badge badge-outline badge-sm"
+                        *ngFor="let t of presenter.userTopicAvaliabilityDTOs">
+                        {{ getTopicName(t.topicId) }}
+                      </span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="flex flex-col gap-1">
+                      <span
+                        class="text-xs text-base-content/60"
+                        *ngFor="let t of presenter.userTopicAvaliabilityDTOs">
+                        {{ getTopicName(t.topicId) }}:
+                        {{ formatDateTime(t.avaliabilityFrom) }} –
+                        {{ formatDateTime(t.avaliabilityTo) }}
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <!-- Empty state -->
+          <div
+            class="flex flex-col items-center justify-center py-16 text-base-content/40"
+            *ngIf="presenters().length === 0">
+            <p class="text-sm mb-4">No presenters registered yet.</p>
+            <button class="btn btn-primary btn-sm" (click)="activeTab = 'add'">
+              Add your first presenter
+            </button>
+          </div>
+  
+        </div>
+  
+      </div>
+      <!-- end List Tab -->
+  
+    </div>
+  </div>
+
