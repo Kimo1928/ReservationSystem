@@ -1,45 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\",
+  "WorkspaceRootPath": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystembackend\\reservationsystembackend\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystem\\reservationsystembackend\\reservationsystembackend\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|solutionrelative:reservationsystembackend\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystembackend\\reservationsystembackend\\entities\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystem\\reservationsystembackend\\reservationsystembackend\\entities\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|solutionrelative:reservationsystembackend\\entities\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystembackend\\reservationsystembackend\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystem\\reservationsystembackend\\reservationsystembackend\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|solutionrelative:reservationsystembackend\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystembackend\\reservationsystembackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystem\\reservationsystembackend\\reservationsystembackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|solutionrelative:reservationsystembackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystembackend\\reservationsystembackend\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystem\\reservationsystembackend\\reservationsystembackend\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|solutionrelative:reservationsystembackend\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystembackend\\reservationsystembackend\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystem\\reservationsystembackend\\reservationsystembackend\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|solutionrelative:reservationsystembackend\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystembackend\\reservationsystembackend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystem\\reservationsystembackend\\reservationsystembackend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|solutionrelative:reservationsystembackend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystembackend\\reservationsystembackend\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystem\\reservationsystembackend\\reservationsystembackend\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|solutionrelative:reservationsystembackend\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystembackend\\reservationsystembackend\\repositories\\hotelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystem\\reservationsystembackend\\reservationsystembackend\\repositories\\hotelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|solutionrelative:reservationsystembackend\\repositories\\hotelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystembackend\\reservationsystembackend\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|c:\\users\\kareem\\desktop\\reservationsystem\\reservationsystembackend\\reservationsystembackend\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26B0096E-BF09-4075-94D4-DAB9E73F09B8}|ReservationSystemBackend\\ReservationSystemBackend.csproj|solutionrelative:reservationsystembackend\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -76,9 +76,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Room.cs",
-              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Entities\\Room.cs",
+              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Entities\\Room.cs",
               "RelativeDocumentMoniker": "ReservationSystemBackend\\Entities\\Room.cs",
-              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Entities\\Room.cs",
+              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Entities\\Room.cs",
               "RelativeToolTip": "ReservationSystemBackend\\Entities\\Room.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -89,22 +89,21 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Hotel.cs",
-              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Entities\\Hotel.cs",
+              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Entities\\Hotel.cs",
               "RelativeDocumentMoniker": "ReservationSystemBackend\\Entities\\Hotel.cs",
-              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Entities\\Hotel.cs",
+              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Entities\\Hotel.cs",
               "RelativeToolTip": "ReservationSystemBackend\\Entities\\Hotel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T23:54:09.061Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-10T23:54:09.061Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ReservationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\ReservationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\ReservationRepository.cs",
               "RelativeDocumentMoniker": "ReservationSystemBackend\\Repositories\\ReservationRepository.cs",
-              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\ReservationRepository.cs",
+              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\ReservationRepository.cs",
               "RelativeToolTip": "ReservationSystemBackend\\Repositories\\ReservationRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -114,22 +113,21 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ReservationController.cs",
-              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\ReservationController.cs",
+              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\ReservationController.cs",
               "RelativeDocumentMoniker": "ReservationSystemBackend\\Controllers\\ReservationController.cs",
-              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\ReservationController.cs",
+              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\ReservationController.cs",
               "RelativeToolTip": "ReservationSystemBackend\\Controllers\\ReservationController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAADgvxQAAAB1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T18:25:34.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-10T18:25:34.51Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "ReservationSystemBackend\\Repositories\\UnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\UnitOfWork.cs",
               "RelativeToolTip": "ReservationSystemBackend\\Repositories\\UnitOfWork.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -139,9 +137,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Services\\UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "ReservationSystemBackend\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Services\\UserService.cs",
               "RelativeToolTip": "ReservationSystemBackend\\Services\\UserService.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAcwCYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -151,9 +149,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "HotelService.cs",
-              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Services\\HotelService.cs",
+              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Services\\HotelService.cs",
               "RelativeDocumentMoniker": "ReservationSystemBackend\\Services\\HotelService.cs",
-              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Services\\HotelService.cs",
+              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Services\\HotelService.cs",
               "RelativeToolTip": "ReservationSystemBackend\\Services\\HotelService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -163,9 +161,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "HotelRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\HotelRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\HotelRepository.cs",
               "RelativeDocumentMoniker": "ReservationSystemBackend\\Repositories\\HotelRepository.cs",
-              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\HotelRepository.cs",
+              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Repositories\\HotelRepository.cs",
               "RelativeToolTip": "ReservationSystemBackend\\Repositories\\HotelRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -175,9 +173,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "TopicController.cs",
-              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\TopicController.cs",
+              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\TopicController.cs",
               "RelativeDocumentMoniker": "ReservationSystemBackend\\Controllers\\TopicController.cs",
-              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\TopicController.cs",
+              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\TopicController.cs",
               "RelativeToolTip": "ReservationSystemBackend\\Controllers\\TopicController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -187,9 +185,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "ReservationSystemBackend\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\Controllers\\UserController.cs",
               "RelativeToolTip": "ReservationSystemBackend\\Controllers\\UserController.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAA1wCUAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

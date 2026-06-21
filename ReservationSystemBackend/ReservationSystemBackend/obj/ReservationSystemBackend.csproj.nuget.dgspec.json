@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\ReservationSystemBackend.csproj": {}
+    "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\ReservationSystemBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\ReservationSystemBackend.csproj": {
+    "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\ReservationSystemBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\ReservationSystemBackend.csproj",
+        "projectUniqueName": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\ReservationSystemBackend.csproj",
         "projectName": "ReservationSystemBackend",
-        "projectPath": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\ReservationSystemBackend.csproj",
+        "projectPath": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\ReservationSystemBackend.csproj",
         "packagesPath": "C:\\Users\\Kareem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kareem\\Desktop\\ReservationSystemBackend\\ReservationSystemBackend\\obj\\",
+        "outputPath": "C:\\Users\\Kareem\\Desktop\\ReservationSystem\\ReservationSystemBackend\\ReservationSystemBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
